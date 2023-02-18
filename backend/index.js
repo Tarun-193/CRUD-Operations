@@ -1,6 +1,6 @@
 const express = require('express')
 const mysql = require('mysql2')
-const bcrypt = require('bcrypt')
+
 const bodyparser = require('body-parser')
 const cors = require('cors')
 
@@ -10,7 +10,6 @@ app.use(cors())
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}))
 
-// Connection to the MySQL database, using the createConnection() method.
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',

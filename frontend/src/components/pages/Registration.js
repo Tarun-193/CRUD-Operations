@@ -2,8 +2,7 @@ import axios from 'axios'
 import React , {useState} from 'react'
 import swal from 'sweetalert'
 import { useNavigate } from "react-router-dom";
-// import './index.css'
-// import {toast} from "react-toastify";
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -50,7 +49,7 @@ const Register = () => {
                 text:"please enter a valid email",
                 icon:'warning'
             })
-            // toast.warning("enter valid email");
+           
         } else{
             axios.post('http://localhost:4000/user/register',{
             firstName,
@@ -74,7 +73,7 @@ const Register = () => {
                 icon:'error'
             })
             console.log(erorMessage);
-            // toast.error("something went wrong");
+            
         })
         }
     }

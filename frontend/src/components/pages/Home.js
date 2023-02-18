@@ -41,7 +41,7 @@ const Home = () => {
                       });
                 })
             }else {
-                swal("Your Student Record file is safe!");
+                swal("Your user Record file is safe!");
             }
     }
     
@@ -62,16 +62,16 @@ const Home = () => {
                     </thead>
                     <tbody>
                     {
-                        details?.map((student)=>{
+                        details?.map((user)=>{
                             return (
-                            <tr key={student.id}>
-                                <td style={{textAlign:"center"}}>{student.first_name}</td>
-                                <td style={{textAlign:"center"}}>{student.last_name}</td>
-                                <td style={{textAlign:"center"}}>{student.contact}</td>
-                                <td style={{textAlign:"center"}}>{student.email}</td>
-                                <td style={{textAlign:"center"}}>{student.address}</td>
-                                <td style={{textAlign:"center"}} onClick={() => navigate(`/Update/${student.id}`)} ><button className='btn btn-edit'>Edit</button></td> 
-                                <td style={{textAlign:"center"}}><button className='btn btn-delete' onClick={()=>{DeleteUser(student.id)}}>Delete</button></td>
+                            <tr key={user.id}>
+                                <td style={{textAlign:"center"}}>{user.first_name}</td>
+                                <td style={{textAlign:"center"}}>{user.last_name}</td>
+                                <td style={{textAlign:"center"}}>{user.contact}</td>
+                                <td style={{textAlign:"center"}}>{user.email}</td>
+                                <td style={{textAlign:"center"}}>{user.address}</td>
+                                <td style={{textAlign:"center"}} onClick={() => navigate(`/Update/${user.id}`)} ><button className='btn btn-edit'>Edit</button></td> 
+                                <td style={{textAlign:"center"}}><button className='btn btn-delete' onClick={()=>{DeleteUser(user.id)}}>Delete</button></td>
                             </tr>)
                         })
                     }

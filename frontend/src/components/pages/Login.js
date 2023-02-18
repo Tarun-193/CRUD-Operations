@@ -3,7 +3,7 @@ import { useNavigate} from "react-router-dom";
 import swal from 'sweetalert'
 import axios from 'axios'
 
-// import './index.css'
+
 
 const Login = () => {
     const navigate = useNavigate(); 
@@ -21,8 +21,8 @@ const Login = () => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-
-        if (email.slice(-10) !== ("@gmail.com")) {
+        // eslint-disable-next-line 
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
             swal({
                 text:"Please enter a valid email",
                 icon:'warning'
