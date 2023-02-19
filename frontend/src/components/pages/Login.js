@@ -41,6 +41,7 @@ const Login = () => {
     return(
         
         <div style={{marginTop: "100px"}}>
+            <h1 className='home-heading' align="center">Login</h1>
         <form onSubmit={submitHandler} style={{
             margin: "auto",
             padding: "15px",
