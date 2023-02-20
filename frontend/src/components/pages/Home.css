@@ -1,35 +1,37 @@
-body{
+body {
     background-color: rgb(17, 43, 60);
 }
-.styled-table{
+
+.styled-table {
     border-collapse: collapse;
     margin: auto;
     font-size: 0.9em;
     font-family: sans-serif;
     width: 80%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);   
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.styled-table thead tr{
+.styled-table thead tr {
     background-color: rgb(32, 83, 117);
     color: #ffffff;
     text-align: center;
 }
 
-.styled-table th,.styled-table td{
+.styled-table th,
+.styled-table td {
     padding: 12px 15px;
 }
 
-.styled-table tbody tr{
+.styled-table tbody tr {
     border-bottom: 1px solid rgb(195, 172, 208);
 
 }
 
-.styled-table tbody tr{
-    background-color:#f3f3f3;
+.styled-table tbody tr {
+    background-color: #f3f3f3;
 }
 
-.btn{
+.btn {
     border: none;
     color: white;
     padding: 5px 8px;
@@ -42,27 +44,28 @@ body{
     cursor: pointer;
 }
 
-.btn-edit{
+.btn-edit {
     background-color: rgb(32, 83, 117);
 }
 
-.btn-delete{
+.btn-delete {
     background-color: rgb(205, 4, 4);
 }
 
-.btn-contact{
+.btn-contact {
     background-color: rgb(32, 83, 117);
     margin-top: 40px;
     padding: 15px;
     margin-left: 47%;
 }
-.btn-login{
+
+.btn-login {
     background-color: rgb(32, 83, 117);
     margin-top: 40px;
     padding: 15px;
     margin-left: 40%;
 }
 
-.home-heading{
+.home-heading {
     color: white;
 }
