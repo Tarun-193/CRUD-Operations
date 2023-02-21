@@ -24,7 +24,7 @@ connection.connect((err) => {
 
 
 // Register Api
-app.post('/register', async (req, res) => {
+app.post('/newregister', async (req, res) => {
     const { email, password } = req.body;
 
     connection.query('SELECT * FROM login WHERE email = ?', [email], (err, result) => {
@@ -49,7 +49,7 @@ app.post('/register', async (req, res) => {
 // Login Api
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    connection.query(`SELECT * from login WHERE email= ?`, [email], (err, data) => {
+    connection.query(`SELECT * from login WHERE email=? AND password= ?`, [email,password], (err, data) => {
         if (err) {
             return res.status(500).json({ err })
         }

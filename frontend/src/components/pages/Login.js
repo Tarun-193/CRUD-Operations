@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import swal from 'sweetalert'
 import axios from 'axios'
 
@@ -32,7 +32,11 @@ const Login = () => {
                 navigate('Home');
             }).catch(err => {
                 console.log(err)
-                setError('Incorrect Email or Password*');
+                setError('');
+                swal({
+                    text:"Incorrect email or password",
+                    icon:'warning'
+                })
             })
         }
     }
@@ -66,10 +70,12 @@ const Login = () => {
                     onChange={changeHandler}
                     required />
                 {error && <p className='errMsg'>{error}</p>}
-                <button className="btn btn-login">Login</button>
-                {/* <Link to="/register">
-                <button className="btn btn-contact">Register</button>
-            </Link> */}
+                <div className='butn'>
+                    <button className="btn btn-login">Login</button>
+                    <Link to="/newregister">
+                        <button className="btn btn-register">Register</button>
+                    </Link>
+                </div>
             </form>
         </div>
     )

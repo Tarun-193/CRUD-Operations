@@ -59,13 +59,23 @@ body {
     margin-left: 47%;
 }
 
-.btn-login {
+.btn-login,.btn-register {
     background-color: rgb(32, 83, 117);
     margin-top: 40px;
     padding: 15px;
-    margin-left: 40%;
+    margin-left: 25%;
 }
 
 .home-heading {
     color: white;
+}
+
+.butn{
+    /* text-align: center; */
+  display:flex;
+  /* position: absolute; */
+}
+
+.error-message{
+    color: rgb(255, 30, 0);
 }
