@@ -41,7 +41,7 @@ const Home = () => {
                 });
             })
         } else {
-            swal("Your user Record file is safe!");
+            swal("Your user details are safe!");
         }
     }
 
